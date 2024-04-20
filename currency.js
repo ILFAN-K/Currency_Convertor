@@ -1,4 +1,3 @@
-/* Created by Tivotal */
 let dropList = document.querySelectorAll("form select");
 let fromCurrency = document.querySelector(".from select");
 let toCurrency = document.querySelector(".to select");

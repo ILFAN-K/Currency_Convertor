@@ -1,5 +1,4 @@
-
-/* Google Fonts(Poppins) */
+/* Google Fonts (Poppins) */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap");
 
 * {
@@ -28,7 +27,7 @@ body {
   background: #fff;
   padding: 30px;
   border-radius: 5px;
-  box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.01);
+  box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.1);
 }
 
 .wrapper header {
@@ -77,47 +76,67 @@ body {
 .wrapper form .drop-list .select-box {
   display: flex;
   align-items: center;
-  justify-content: center;
-  width: 115px;
-  height: 45px;
+  justify-content: space-between;
+  flex: 1;
+  height: 50px;
   border: 1px solid #999;
   border-radius: 5px;
+  padding:3px; 
+  background-color: #fff;
+  position: relative; 
 }
-
 .wrapper form .drop-list .select-box img {
   max-width: 21px;
+  margin-left: 10px;
 }
 
 .wrapper form .drop-list .select-box select {
-  width: auto;
-  font-size: 16px;
+  flex: 1;
+  border: none;
+  font-size: 15px;
   background: none;
-  margin: 0 -5px 0 5px;
+  padding: 0 5px;
+  cursor: pointer;
+  appearance: none; 
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
-.wrapper form .drop-list .select-box select::-webkit-scrollbar {
-  width: 8px;
+.wrapper form .drop-list .select-box::after {
+  content: "▼"; 
+  position: absolute;
+  right: 10px;
+  font-size: 12px;
+  color: #999;
+  pointer-events: none;
 }
 
-.wrapper form .drop-list .select-box select::-webkit-scrollbar-track {
-  background: #fff;
-}
-
-.wrapper form .drop-list .select-box select::-webkit-scrollbar-thumb {
-  background: #888;
-  border-radius: 5px;
-  border-right: 2px solid #fff;
+.wrapper form .drop-list .select-box select:focus {
+  outline: none;
+  background-color: #f9f9f9;
 }
 
 .wrapper .drop-list .icon {
-  font-size: 22px;
-  margin-top: 30px;
+  font-size: 20px;
+  margin: 0 15px; 
   cursor: pointer;
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  color: #999; 
+  transition: color 0.3s ease; 
+}
+
+.wrapper .drop-list .icon:hover {
+  color: purple;
 }
 
 .wrapper form .exchange_rate {
   font-size: 16px;
-  margin: 20px 0 30px;
+  margin: 30px 0 30px;
 }
 
 .wrapper form button {
